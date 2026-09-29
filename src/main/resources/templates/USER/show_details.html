@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+      th:replace="~{USER/base :: layout(~{::section})}">
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact Details</title>
+</head>
+<body>
+
+    <section>
+        
+        <div class="card mr-3" th:if="${contact}">
+		
+			<div class="card-body text-center">
+			
+				<img th:src = "@{/image/} + ${contact.image}" style="height: 200px; width: 200px; object-fit: cover;"/>
+
+                <h3> <span th:text= "${contact.name}"> </span></h3>
+        
+         	 <h3> <span th:text= "${contact.SecondName}"> </span></h3>
+         	 
+         	 
+         	 <h3 class = "text-center"> <span th:utext= "${contact.description}"> </span></h3>
+        
+        </div>
+        
+        </div>
+        
+        
+        <div class= "card mr-3" th:if= "${error}">
+        
+        	<div class = "card-body text-center">
+        	
+        	
+        			<h3> <span th:text = "${error}"></span></h3>
+        	
+        	
+        	</div>
+        
+        
+        
+        </div>
+        
+    </section>
+
+</body>
+</html>

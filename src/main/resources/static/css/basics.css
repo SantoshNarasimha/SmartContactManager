@@ -1,0 +1,249 @@
+/* General Body Settings */
+body {
+	background: #e2e2e2 !important;
+	margin: 0;
+	padding: 0;
+}
+
+/* Custom Teal Theme */
+.custom-teal-text {
+	color: #009688 !important;
+}
+
+.bg-custom-teal {
+	background-color: #009688 !important;
+}
+
+.btn-custom-teal {
+	background-color: #009688 !important;
+	color: white !important;
+	border: none;
+	transition: 0.3s;
+}
+
+.btn-custom-teal:hover {
+	background-color: #00796b !important;
+}
+
+/*  Search Tab Css */
+
+.search-container {
+	position: relative;
+}
+
+.search-result {
+	position: absolute;
+	background: white;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid gray;
+	display: none;
+}
+
+
+.bg-primary {
+	background: #009688 !important;
+}
+
+/* Fixes the Background and Centering */
+.banner {
+	width: 100%;
+	height: 93vh; /* Adjust based on your navbar height */
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(../image/banner.jpg);
+	background-size: cover; /* Ensures image fills the screen */
+	background-position: center; /* Keeps image centered */
+	display: flex; /* Enables Flexbox for centering */
+	flex-direction: column;
+	justify-content: center; /* Vertical center */
+	align-items: center; /* Horizontal center */
+	text-align: center;
+	color: white;
+}
+
+/* Login Box Styling */
+#login-box {
+	margin-top: 20px;
+	width: 100%;
+	max-width: 450px;
+	min-height: 350px;
+	border: 1px solid #9C9C9C;
+	background-color: white;
+	padding: 25px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Removes the overlap issue you had */
+#register-link {
+	margin-top: 0 !important;
+}
+
+.form-group {
+	margin-bottom: 15px;
+	text-align: left; /* Keeps labels aligned left inside centered box */
+}
+
+/* Nav bar in user home page */
+/* 
+Nav bar in user home page
+.sidebar {
+	width: 18%;
+	background: white;
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;
+}
+ */
+ 
+ /* Update your Sidebar */
+.sidebar {
+    width: 18%;
+    background: white;
+    height: 100%;
+    position: fixed;
+    
+    /* 1. Push sidebar down so it starts below the navbar */
+    padding-top: 45px; /* Keep your internal spacing */
+    
+    margin-top: 60px;  /* Pushes the whole sidebar down to clear navbar */
+    
+    /* 2. Ensure it stays above content but below navbar interactions if needed */
+    z-index: 100; 
+}
+
+/* Update your Content Area */
+.content {
+    margin-left: 20%;
+    
+    /* 3. Push content down so it doesn't hide behind the navbar */
+    padding-top: 70px; /* 60px for navbar + 10px buffer */
+
+}
+ 
+ 
+.sidebar a {
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+}
+
+/* Cursor on nav bar */
+.sidebar a:hover {
+	background: #e2e2e2;
+	color: #009688; /* Your teal theme color */
+	padding-left: 30px; /* deeply satisfying slide effect */
+}
+
+.sidebar .divider {
+	height: 5px;
+	width: 100%;
+	background: #e2e2e2;
+	margin-top: 10px;
+}
+/* 
+Content area
+.content {
+	margin-left: 20%;
+}
+
+ */
+@media only screen and (max-wdith: 600px) {
+	.sidebar {
+	display: none;
+	width: 80% !important;
+	background: white;
+	height: 100vh;
+	position: fixed;
+	padding-top: 20px;
+	}
+	
+	.content {
+	margin-left: 0%!important;
+	
+	}
+	
+}
+
+.sidebar .crossBtn {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 30px;
+	/* 
+	cursor: pointer;: Changes the mouse cursor to a hand icon when you hover over it, showing the user it is clickable. */
+	cursor: pointer;
+}
+
+.ok {
+	cursor: pointer;
+}
+
+/* body {
+    background: #e2e2e2 !important;
+}
+
+Apply #009688 to text and labels
+.custom-teal-text {
+    color: #009688 !important;
+}
+
+
+.bg-primary{
+	background: #009688 !important;
+}
+
+Custom Button Styling
+.btn-custom-teal {
+    background-color: #009688 !important;
+    color: white !important;
+    border: none;
+}
+
+.btn-custom-teal:hover {
+    background-color: #00796b !important; Slightly darker teal for hover effect
+    color: white !important;
+}
+
+Box Styling
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    min-height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: white;
+    border-radius: 8px;
+}
+
+
+Update this in your CSS
+.banner {
+    width: 100%;
+    Change height to auto or a smaller value so it doesn't swallow the whole page
+    min-height: 200px; 
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(../image/banner.jpg);
+    color: white;
+}
+
+Ensure the login box stays on top and visible
+#login {
+    position: relative;
+    z-index: 10;
+    margin-top: -50px; Optional: pull it up slightly into the banner area if desired
+}
+
+#login-form {
+    padding: 20px;
+}
+
+Ensure form elements have some breathing room
+.form-group {
+    margin-bottom: 1rem;
+}
+
+Remove the negative margin that caused overlapping
+#register-link {
+    margin-top: 0;
+} */

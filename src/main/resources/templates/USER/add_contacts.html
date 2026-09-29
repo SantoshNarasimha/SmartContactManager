@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="USER/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home Page</title>
+</head>
+<body>
+
+    <section>
+        <div class="card mr-3">
+            <div class="card-body">
+                <h2 class="mt-5 mb-4 text-center">Add Contact</h2>
+                
+                <div class="container-fluid mt-1">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+
+                            <form novalidate action="#" 
+                                  th:action="@{/user/do_register}" 
+                                  method="post"
+                                  enctype="multipart/form-data" 
+                                  th:object="${contact}">
+
+                                <div class="mb-3 input-group">
+                                    <span class="input-group-text"> 
+                                        <i class="fa-regular fa-address-book"></i>
+                                    </span> 
+                                    <input type="text" class="name-val form-control" id="name" name="name" placeholder="Enter Your Name" />
+                                    <small class="form-field-message form-text text-danger ml-2">Error Message</small>
+                                </div>
+
+                                <div class="mb-3 input-group">
+                                    <span class="input-group-text"> 
+                                        <i class="fa-solid fa-universal-access"></i>
+                                    </span> 
+                                    <input type="text" class="form-control" name="SecondName" id="SecondName" placeholder="Enter Nick Name here" />
+                                </div>
+
+                                <div class="mb-3 input-group">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                    </span>
+                                    <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number Here" />
+                                </div>
+
+                                <div class="mb-3 input-group">
+                                    <span class="input-group-text"> 
+                                        <i class="fa-light fa-at"></i>
+                                    </span> 
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email here" />
+                                </div>
+
+                                <div class="mb-3 input-group">
+                                    <span class="input-group-text"> 
+                                        <i class="fa-solid fa-building"></i>
+                                    </span> 
+                                    <input type="text" class="form-control" id="work" name="work" placeholder="Enter your work here" />
+                                </div>
+
+                                <div class="mb-3 form-group">
+                                    <textarea class="form-control" id="description" name="description" rows="10" placeholder="Enter Contact Description"></textarea>
+                                </div>
+
+                                <div class="mb-3 custom-file">
+                                    <input type="file" name="ProfileImage" />
+                                </div>
+
+                                <div class="container text-center">
+                                    <button type="submit" class="btn btn-outline-primary">Save Contact</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
